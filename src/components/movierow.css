@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
+
+.movieRow {
+  margin-bottom: 40px;
+}
+
+.movieRow:hover .movieRow--left,
+.movieRow:hover .movieRow--right{
+  opacity: 1;
+}
+
+.movieRow h1 {
+  color: #fff ;
+  margin: 1rem 0px 0.5rem 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.movieRow--listarea{
+  overflow-x: hidden;
+}
+
+.movieRow--list{
+  width: 0px;
+  padding-left: 1rem;
+  user-select: none;
+}
+
+.movieRow--item{
+  display: inline-block;
+  width: 12.5rem;
+  margin: 0px 10px 0px 10px;
+}
+
+.movieRow--item img{
+  width: 200px;
+  transform: scale(0.9);
+  transition: all ease 0.3s; 
+  border-radius: 0.3rem;
+}
+
+.movieRow--item img:hover{
+  transform: scale(1.0);
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.movieRow--left, .movieRow--right {
+  position: absolute;
+  width: 50px;
+  height: 300px;
+  background-color: rgba(17, 17, 17, 0.479);
+  z-index: 99;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
+.movieRow--left {
+  left: 0
+}
+
+.movieRow--right {
+  right: 0
+}
